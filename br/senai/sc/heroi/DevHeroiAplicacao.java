@@ -65,6 +65,7 @@ public class DevHeroiAplicacao {
         List<Heroi> lista = repository.consultar();
         if (lista.isEmpty()) {
             view.exibirMensagemErro("\033[0;33mSem heróis cadastrados para exibição! \033[0m");
+            System.out.println();
             return;
         }
         for (Heroi heroi : lista) {
